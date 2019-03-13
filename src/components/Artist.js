@@ -6,7 +6,7 @@ const Artist = ({ artist }) => {
     const {images, name , followers, genres} = artist;
 
     return (
-        <div>
+        <div className="artist-details">
             <h3>{name}</h3>
             <p>{followers.total} followers</p>
             <p>{genres.join(',')}</p>

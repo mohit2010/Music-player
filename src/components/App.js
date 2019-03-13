@@ -8,10 +8,6 @@ const API_ADDRESS = 'https://spotify-api-wrapper.appspot.com';
 class App extends Component {
     state = { artist: null, tracks: [] };
 
-    componentDidMount() {
-        this.searchArtist('alan');
-    }
-
     searchArtist = artistQuery => {
     
         fetch(`${API_ADDRESS}/artist/${artistQuery}`)
@@ -35,7 +31,7 @@ class App extends Component {
         // console.log('this.state', this.state);
         return(
             <div>
-                <h2>Music Master</h2>
+                <h2 className="main-heading">Music Master</h2>
                 <Search searchArtist={this.searchArtist} />
                 <Artist artist={this.state.artist} />
                 <Tracks tracks={this.state.tracks} />
